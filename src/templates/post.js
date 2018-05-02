@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function Blog ({data, // this prop will be injected by the GraphQL query below.
+export default function PostPage ({data, // this prop will be injected by the GraphQL query below.
   }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, fields, html } = markdownRemark
   return (
     <div className='blog-post-container'>
       <div className='blog-post'>
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <h2>{fields.date}</h2>
         <div className='blog-post-content' dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
@@ -17,11 +17,12 @@ export default function Blog ({data, // this prop will be injected by the GraphQ
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { path: { eq: $path } }) {
       html
-      frontmatter {
+      fields {
         date(formatString: "MMMM DD, YYYY")
-        path
+      }
+      frontmatter {
         title
       }
     }

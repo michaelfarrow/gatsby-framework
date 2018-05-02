@@ -3,6 +3,10 @@
 step "install dependencies"
 npm install --no-optional --no-bin-links
 
+step "link dev tools"
+ln -s "/app/tools/reload" /usr/bin/reload
+ln -s "/app/tools/reload" /usr/bin/restart
+
 step "run"
 export FORCE_COLOR=1
 logger gatsby npm run develop
