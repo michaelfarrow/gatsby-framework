@@ -5,4 +5,4 @@ npm install --no-optional --no-bin-links
 
 step "run"
 export FORCE_COLOR=1
-logger gatsby npm run develop -- --host 0.0.0.0 --port 80
+logger gatsby npm run develop

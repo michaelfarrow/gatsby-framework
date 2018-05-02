@@ -8,6 +8,8 @@
     "gatsby-cli": "1.1.51",
     "gatsby-link": "1.6.41",
     "gatsby-plugin-react-helmet": "2.0.11",
+    "gatsby-source-filesystem": "1.5.35",
+    "gatsby-transformer-remark": "1.7.40",
     "react-helmet": "5.2.0"
   },
   "keywords": [
@@ -17,7 +19,7 @@
   "scripts": {
     "gatsby": "node_modules/gatsby-cli/lib/index.js",
     "build": "npm run gatsby build -- --prefix-paths",
-    "develop": "npm run gatsby develop",
+    "develop": "npm run gatsby develop --- --host 0.0.0.0 --port 80",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
