@@ -3,6 +3,7 @@
 step "install dependencies"
 npm install --no-optional --no-bin-links
 
-step "run"
+step "build"
 export FORCE_COLOR=1
-logger gatsby npm run develop -- --host 0.0.0.0 --port 80
+npm run build
+exit
