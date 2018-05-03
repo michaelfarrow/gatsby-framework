@@ -16,8 +16,8 @@ export default function PostPage ({data, // this prop will be injected by the Gr
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(fields: { path: { eq: $path } }) {
+  query BlogPostByPath($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
         date(formatString: "MMMM DD, YYYY")

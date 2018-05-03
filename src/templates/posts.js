@@ -3,9 +3,11 @@ import Link from 'gatsby-link'
 
 const NavLink = props => {
   if (!props.test) {
-    return <Link to={props.url}>
-           {props.text}
-           </Link>
+    return (
+      <Link to={props.url}>
+      {props.text}
+      </Link>
+    )
   } else {
     return <span>{props.text}</span>
   }
@@ -24,7 +26,7 @@ const PostsPage = ({ data, pathContext }) => {
            <div className='date'>
              {node.fields.date}
            </div>
-           <Link className='blogUrl' to={node.fields.path}>
+           <Link className='blogUrl' to={`/${pathPrefix}/${node.fields.slug}`}>
            {node.frontmatter.title}
            </Link>
            <div>
