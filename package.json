@@ -15,7 +15,8 @@
     "gatsby-plugin-sharp": "1.6.44",
     "gatsby-image": "1.0.48",
     "react-helmet": "5.2.0",
-    "escape-string-regexp": "1.0.5"
+    "escape-string-regexp": "1.0.5",
+    "color-thief-jimp": "2.0.2"
   },
   "keywords": [
     "gatsby"
