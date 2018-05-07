@@ -1,0 +1,2 @@
+webpackJsonp([0x81b8806e4260],{412:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Gatsby",version:"1.9.256"}}},pathContext:{}}}});
+//# sourceMappingURL=path---index-65240c112dc743aa7a57.js.map

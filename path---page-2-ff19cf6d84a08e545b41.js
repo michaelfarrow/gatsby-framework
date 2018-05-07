@@ -1,0 +1,2 @@
+webpackJsonp([0x7b71d9db271c],{413:function(a,e){a.exports={data:{headerImage:{colours:{dominant:"#eef1f1"},sizes:{aspectRatio:1.3333333333333333,src:"/static/header3-6b99c159b57f8862ba2534da776f94c4-2fd78.png",srcSet:"/static/header3-6b99c159b57f8862ba2534da776f94c4-739b5.png 200w,\n/static/header3-6b99c159b57f8862ba2534da776f94c4-549e8.png 400w,\n/static/header3-6b99c159b57f8862ba2534da776f94c4-2fd78.png 800w",sizes:"(max-width: 800px) 100vw, 800px"}}},pathContext:{}}}});
+//# sourceMappingURL=path---page-2-ff19cf6d84a08e545b41.js.map

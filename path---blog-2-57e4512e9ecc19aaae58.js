@@ -1,2 +1,0 @@
-webpackJsonp([0xccc7515567d0],{336:function(t,o){t.exports={pathContext:{group:[{node:{id:"/app/src/posts/2018-05-02-my-first-post9.md absPath of file >>> MarkdownRemark",frontmatter:{title:"My first blog post"},fields:{slug:"my-first-post9",path:"/blog/my-first-post9",date:"2018-05-02"}}}],pathPrefix:"blog",first:!1,last:!0,index:2,pageCount:2,additionalContext:{}}}}});
-//# sourceMappingURL=path---blog-2-57e4512e9ecc19aaae58.js.map
