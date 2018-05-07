@@ -1,5 +1,8 @@
 #!/bin/bash
 
+step "remove cache"
+rm -rf ./cache
+
 step "install dependencies"
 npm install --no-optional --no-bin-links
 

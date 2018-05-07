@@ -3,6 +3,10 @@ title: "My first blog post"
 ---
 # An exhibit of Markdown
 
+![alt text](header.jpg "Logo Title Text 1")
+
+![alt text](header2.png)
+
 This note demonstrates some of what [Markdown][1] is capable of doing.
 
 *Note: Feel free to play with this page. Unlike regular notes, this doesn&#39;t automatically save itself.*
@@ -62,12 +66,6 @@ URLs can be made in a handful of ways:
 * A named link to [MarkItDown][3]. The easiest way to do these is to select what you want to make a link and hit `Ctrl+L`.
 * Another named link to [MarkItDown](http://www.markitdown.net/)
 * Sometimes you just want a URL like <http://www.markitdown.net/>.
-
-## Horizontal rule
-
-A horizontal rule is a line that goes across the middle of the page.
-
-___
 
 It&#39;s sometimes handy for breaking things up.
 

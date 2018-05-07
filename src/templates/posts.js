@@ -19,7 +19,7 @@ const PostsPage = ({ data, pathContext }) => {
   const nextUrl = (index + 1).toString()
 
   return (
-    <div>
+    <div className='layout-content'>
       <h4>{pageCount} Pages</h4>
       {group.map(({ node }) => (
          <div key={node.id} className='blogListing'>

@@ -1,41 +1,35 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Img from 'gatsby-image'
+import Img from 'components/image'
 
 const SecondPage = props => {
   const { headerImage } = props.data
-  const { colours } = headerImage.fields
+  const { colours } = headerImage
   return (
     <div>
-      <header className='header'>
+      <header style={{height: '30em', overflow: 'hidden', position: 'relative'}}>
         <Img
           title='Header image'
-          style={{backgroundColor: colours.dominant}}
+          style={{backgroundColor: colours.dominant, position: 'absolute', width: '100%', height: '100%'}}
           alt='Greek food laid out on table'
           sizes={headerImage.sizes} />
       </header>
-      <h1>Hi from the second page</h1>
-      <p>
-        Welcome to page 2
-      </p>
-      <Link to='/'> Go back to the homepage
-      </Link>
+      <div className='layout-content'>
+        <h1>Hi from the second page</h1>
+        <p>
+          Welcome to page 2
+        </p>
+        <Link to='/'> Go back to the homepage
+        </Link>
+      </div>
     </div>
   )
 }
 
 export const pageQuery = graphql`
   query HeaderImageQuery {
-    headerImage: imageSharp(fields: { id: { eq: "header2" } } ) {
-      fields {
-        colours {
-          dominant
-          palette
-        }
-      }
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes_noBase64
-      }
+    headerImage: imageSharp(fields: { id: { eq: "header3" } } ) {
+      ...Image_sizeBlog
     }
   }
 `

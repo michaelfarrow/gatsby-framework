@@ -1,10 +1,37 @@
-const createPages = require('./lib/createPages')
-const onCreateNode = require('./lib/onCreateNode')
+const importer = require('lib/importer')(__dirname)
 
-exports.onCreateNode = _ => {
-  const { node } = _
-  const type = node.internal.type
-  if (onCreateNode[type]) return onCreateNode[type](_)
+const createPages = importer('lib/createPages')
+const onCreateNode = importer('lib/onCreateNode')
+const modifyWebpackConfig = importer('lib/modifyWebpackConfig')
+
+const handler = (handlers, key, noop) => {
+  if (!noop) {
+    noop = () => {
+      return null
+    }
+  }
+  return handlers[key] || noop
 }
 
-exports.createPages = _ => Promise.all(createPages.map(f => f(_)))
+exports.createPages = _ => {
+  return Promise.all(
+    Object
+      .values(createPages)
+      .map(f => f(_))
+  )
+}
+
+exports.onCreateNode = _ => {
+  return handler(
+    onCreateNode,
+    _.node.internal.type
+  )(_)
+}
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  return handler(
+    modifyWebpackConfig,
+    stage,
+    config => config
+  )(config)
+}
