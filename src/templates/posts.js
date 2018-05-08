@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import './posts.scss'
+
 const NavLink = props => {
   if (!props.test) {
     return (
@@ -19,10 +21,10 @@ const PostsPage = ({ data, pathContext }) => {
   const nextUrl = (index + 1).toString()
 
   return (
-    <div className='layout-content'>
+    <div id='template-posts' className='layout-content'>
       <h4>{pageCount} Pages</h4>
       {group.map(({ node }) => (
-         <div key={node.id} className='blogListing'>
+         <div key={node.id} className='posts-post'>
            <div className='date'>
              {node.fields.date}
            </div>
