@@ -5,7 +5,8 @@ module.exports = {
     title: 'Gatsby',
     meta: [
       { name: 'description', content: 'Sample' },
-      { name: 'keywords', content: 'sample, something' }
+      { name: 'keywords', content: 'sample, something' },
+      { name: 'theme-color', content: 'rebeccapurple' }
     ],
     version: require('package.json').dependencies.gatsby
   },

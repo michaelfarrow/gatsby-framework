@@ -3,6 +3,14 @@ title: "My first blog post"
 ---
 # An exhibit of Markdown
 
+[Home](/)
+
+[Home](http://localhost)
+
+[Blog](http://localhost/blog)
+
+[Blog](/blog)
+
 ![alt text](header.jpg "Logo Title Text 1")
 
 ![alt text](header2.png)

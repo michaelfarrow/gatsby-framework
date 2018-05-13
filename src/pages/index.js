@@ -1,22 +1,29 @@
 import React from 'react'
+import { transitions, selectTransitionStyle } from 'utils/transition'
 
-const IndexPage = ({data}) => {
-  const meta = data.site.siteMetadata
-  return (
-    <div id='layout-home'>
-      <div className='content'>
-        <div className='title'>
-          {meta.title}
-        </div>
-        <div className='subtitle'>
-          <span>{meta.version}</span>
+export default class IndexPage extends React.Component {
+
+  static transitionEnterDuration = 300
+  static transitionExitDuration = 150
+
+  render () {
+    const { data } = this.props
+    const meta = data.site.siteMetadata
+    return (
+      <div style={selectTransitionStyle(this, transitions.fade)}>
+        <div className='content'>
+          <div className='title'>
+            {meta.title}
+          </div>
+          <div className='subtitle'>
+            <span>{meta.version}</span>
+          </div>
         </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
-export default IndexPage
+}
 
 export const pageQuery = graphql`
   query IndexQuery {

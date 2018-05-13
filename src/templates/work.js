@@ -1,17 +1,22 @@
 import React from 'react'
 import Html from 'components/html'
 
-export default function WorkPage ({data}) {
-  const { markdownRemark } = data
-  const { frontmatter, fields, html, images } = markdownRemark
-  return (
-    <div className='work-container'>
-      <div className='work'>
-        <h1>{frontmatter.title}</h1>
-        <Html className='blog-post-content' html={html} images={images} />
+export default class WorkPage extends React.Component {
+
+  render () {
+    const { data } = this.props
+    const { markdownRemark } = data
+    const { frontmatter, fields, html, images } = markdownRemark
+    return (
+      <div>
+        <div>
+          <h1>{frontmatter.title}</h1>
+          <Html html={html} images={images} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
 }
 
 export const pageQuery = graphql`
